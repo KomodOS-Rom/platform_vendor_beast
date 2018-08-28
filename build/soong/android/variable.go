@@ -10,6 +10,9 @@ type Product_variables struct {
 	Needs_legacy_camera_hal1_dyn_native_handle struct {
 		Cppflags []string
 	}
+	Should_skip_waiting_for_qsee struct {
+		Cflags []string
+	}
 
 	Uses_media_extensions struct {
 		Cflags []string
@@ -45,6 +48,7 @@ type ProductVariables struct {
 	Needs_legacy_camera_hal1_dyn_native_handle  *bool `json:",omitempty"`
 	Uses_media_extensions   *bool `json:",omitempty"`
 	Needs_text_relocations  *bool `json:",omitempty"`
+	Should_skip_waiting_for_qsee  *bool `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
 	Supports_legacy_hw_fde  *bool `json:",omitempty"`
 	Target_shim_libs  *string `json:",omitempty"`
