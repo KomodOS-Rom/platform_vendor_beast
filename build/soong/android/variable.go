@@ -15,6 +15,9 @@ type Product_variables struct {
 		Cflags []string
 	}
 
+	Supports_legacy_hw_fde struct {
+		Cflags []string
+	}
 	Needs_text_relocations struct {
 		Cppflags []string
 	}
@@ -43,6 +46,7 @@ type ProductVariables struct {
 	Uses_media_extensions   *bool `json:",omitempty"`
 	Needs_text_relocations  *bool `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
+	Supports_legacy_hw_fde  *bool `json:",omitempty"`
 	Target_shim_libs  *string `json:",omitempty"`
 	Uses_generic_camera_parameter_library  *bool `json:",omitempty"`
 	Uses_qti_camera_device  *bool `json:",omitempty"`
