@@ -63,6 +63,9 @@ PRODUCT_COPY_FILES += \
 # Bootanimation
 $(call inherit-product, vendor/komodo/config/bootanimation.mk)
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.boot.vendor.overlay.theme=com.potato.overlay.lawnconf
+
 # Substratum Key
 PRODUCT_COPY_FILES += \
     vendor/komodo/prebuilt/common/priv-app/SubstratumKey.apk:system/priv-app/SubstratumKey/SubstratumKey.apk

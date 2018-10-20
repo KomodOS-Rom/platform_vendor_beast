@@ -37,6 +37,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES +=  \
     vendor/komodo/prebuilt/common/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
+# Lawnchair Default Configuration
+PRODUCT_PACKAGES += \
+    LawnConf
+
 # Filesystems tools
 PRODUCT_PACKAGES += \
     BluetoothExt \
