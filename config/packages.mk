@@ -116,6 +116,11 @@ PRODUCT_PACKAGES += \
     procrank
 endif
 
+# Cutout control overlays
+PRODUCT_PACKAGES += \
+    HideCutout \
+    StatusBarStock
+
 # Overlays
 PRODUCT_PACKAGES += \
     AmberAccent \
