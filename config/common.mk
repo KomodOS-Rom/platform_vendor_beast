@@ -110,7 +110,9 @@ PRODUCT_PACKAGES += \
     PrimaryWhite \
     PrimaryColdWhite \
     PrimaryWarmWhite \
-    PrimaryDarkBlue
+    PrimaryDarkBlue \
+    PrimaryViolator \
+    PrimaryTealMeal
 
 # Props
 include vendor/beast/config/beast_props.mk
