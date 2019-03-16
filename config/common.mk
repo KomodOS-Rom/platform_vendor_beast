@@ -83,6 +83,7 @@ PRODUCT_PACKAGES += \
     NotificationsPrimary
 
 PRODUCT_PACKAGES += \
+    AccentSyberia \
     AccentSluttyPink \
     AccentPixel \
     AccentGoldenShower \
