@@ -32,7 +32,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.calibration_cad=/system/etc/calibration_cad.xml \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0 \
-    ro.build.selinux=0
+    ro.build.selinux=1
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
 # Thank you, please drive thru!
