@@ -41,11 +41,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Bootanimation
 $(call inherit-product, vendor/beast/config/bootanimation.mk)
 
-# Lawnchair
-PRODUCT_COPY_FILES += \
-    vendor/beast/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
-    vendor/beast/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
-
 # Substratum Key
 PRODUCT_COPY_FILES += \
     vendor/beast/prebuilt/common/priv-app/SubstratumKey.apk:system/priv-app/SubstratumKey/SubstratumKey.apk

@@ -163,13 +163,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Custom-Fonts
 	
-#Lawnchair
-PRODUCT_PACKAGES += \
-    Lawnchair \
-    LawnConf
-	
 #Phonograph
 PRODUCT_PACKAGES += \
 	Phonograph
+	
+# JamesDSP
+PRODUCT_PACKAGES += \
+   MusicFX \
+   libjamesdsp
 	
 
