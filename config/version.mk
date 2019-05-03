@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-BEAST_VERSION = 1.3
+BEAST_VERSION = 1.4
 
 ifndef BEAST_BUILD_TYPE
     BEAST_BUILD_TYPE := UNOFFICIAL
