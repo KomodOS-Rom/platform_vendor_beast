@@ -31,6 +31,7 @@ endif
 # priv-app permissions
 PRODUCT_COPY_FILES += \
     vendor/beast/prebuilt/common/etc/permissions/privapp-permissions-beast.xml:system/etc/permissions/privapp-permissions-beast.xml \
+    vendor/beast/prebuilt/common/etc/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml \
     vendor/beast/prebuilt/common/etc/permissions/privapp-permissions-elgoog.xml:system/etc/permissions/privapp-permissions-elgoog.xml
 
 # Overlays
