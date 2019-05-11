@@ -45,8 +45,8 @@ default_manifest = ".repo/manifests/beast_default.xml"
 custom_local_manifest = ".repo/local_manifests/beast_manifest.xml"
 custom_default_revision = "pie"
 custom_dependencies = "beast.dependencies"
-org_manifest = "BEAST-Devices"  # leave empty if org is provided in manifest
-org_display = "BEAST-Devices"  # needed for displaying
+org_manifest = "BeastRoms-Devices"  # leave empty if org is provided in manifest
+org_display = "BeastRoms-Devices"  # needed for displaying
 
 github_auth = None
 
