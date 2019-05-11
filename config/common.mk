@@ -14,6 +14,10 @@ include vendor/beast/config/beast_props.mk
 # Packages
 include vendor/beast/config/packages.mk
 
+# Vendor specific init files
+$(foreach f,$(wildcard vendor/beast/prebuilt/common/etc/init/*.rc),\
+    $(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/beast/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
