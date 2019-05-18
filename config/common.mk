@@ -5,6 +5,10 @@ PRODUCT_DEVICE := generic
 
 EXCLUDE_SYSTEMUI_TESTS := true
 
+# Cutout control overlay
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay
+
 # version
 include vendor/beast/config/version.mk
 
