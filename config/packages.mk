@@ -20,6 +20,7 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     LiveWallpapers \
     LiveWallpapersPicker \
+    MarkupGoogle \
     messaging \
     SubstratumSignature \
     WellbeingPrebuilt \
