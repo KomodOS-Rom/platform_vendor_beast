@@ -62,11 +62,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/beast/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
-# LatinIME gesture typing
-PRODUCT_COPY_FILES += \
-    vendor/beast/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
-    vendor/beast/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
-
 # Versioning
 include vendor/beast/config/version.mk
 

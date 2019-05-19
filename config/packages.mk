@@ -16,7 +16,7 @@
 PRODUCT_PACKAGES += \
     Gallery2 \
     Beast \
-    LatinIME \
+    GboardGoPreb \
     Launcher3 \
     LiveWallpapers \
     LiveWallpapersPicker \
