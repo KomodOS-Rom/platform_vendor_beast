@@ -1,2 +1,2 @@
 # Bring in Mediatek helper macros
-include vendor/beast/build/core/mtk_utils.mk
+include vendor/komodo/build/core/mtk_utils.mk

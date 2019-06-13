@@ -17,13 +17,13 @@
 TARGET_BOOT_ANIMATION_RES ?= undefined
 
 ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
-     PRODUCT_COPY_FILES += vendor/beast/prebuilt/common/media/1080.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/komodo/prebuilt/common/media/1080.zip:system/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),2160)
-     PRODUCT_COPY_FILES += vendor/beast/prebuilt/common/media/2160.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/komodo/prebuilt/common/media/2160.zip:system/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),undefined)
      $(warning Target bootanimation res is undefined, using generic bootanimation )
-     PRODUCT_COPY_FILES += vendor/beast/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/komodo/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 else
      $(warning Defined bootanimation res is wrong, using generic bootanimation )
-     PRODUCT_COPY_FILES += vendor/beast/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/komodo/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 endif

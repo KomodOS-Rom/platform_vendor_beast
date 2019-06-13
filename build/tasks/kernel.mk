@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Kernel variables are configured in vendor/beast/config/BoardConfigKernel.mk
+# Kernel variables are configured in vendor/komodo/config/BoardConfigKernel.mk
 
 ifneq ($(TARGET_NO_KERNEL),true)
 

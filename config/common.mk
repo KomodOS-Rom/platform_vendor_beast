@@ -1,6 +1,6 @@
 # Generic product
-PRODUCT_NAME := beast
-PRODUCT_BRAND := beast
+PRODUCT_NAME := komodo
+PRODUCT_BRAND := komodo
 PRODUCT_DEVICE := generic
 
 EXCLUDE_SYSTEMUI_TESTS := true
@@ -10,67 +10,67 @@ PRODUCT_PACKAGES += \
     NoCutoutOverlay
 
 # version
-include vendor/beast/config/version.mk
+include vendor/komodo/config/version.mk
 
 # Props
-include vendor/beast/config/beast_props.mk
+include vendor/komodo/config/komodo_props.mk
 
 # Packages
-include vendor/beast/config/packages.mk
+include vendor/komodo/config/packages.mk
 
 # Vendor specific init files
-$(foreach f,$(wildcard vendor/beast/prebuilt/common/etc/init/*.rc),\
+$(foreach f,$(wildcard vendor/komodo/prebuilt/common/etc/init/*.rc),\
     $(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/beast/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/beast/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/beast/prebuilt/common/bin/50-beast.sh:system/addon.d/50-beast.sh \
-    vendor/beast/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+    vendor/komodo/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/komodo/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/komodo/prebuilt/common/bin/50-komodo.sh:system/addon.d/50-komodo.sh \
+    vendor/komodo/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
 ifeq ($(AB_OTA_UPDATER),true)
 PRODUCT_COPY_FILES += \
-    vendor/beast/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
-    vendor/beast/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
-    vendor/beast/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+    vendor/komodo/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/komodo/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/komodo/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)
     PRODUCT_COPY_FILES += \
-    vendor/beast/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
-    vendor/beast/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
+    vendor/komodo/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
+    vendor/komodo/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
 endif
 
 # priv-app permissions
 PRODUCT_COPY_FILES += \
-    vendor/beast/prebuilt/common/etc/permissions/privapp-permissions-beast.xml:system/etc/permissions/privapp-permissions-beast.xml \
-    vendor/beast/prebuilt/common/etc/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml \
-    vendor/beast/prebuilt/common/etc/permissions/privapp-permissions-elgoog.xml:system/etc/permissions/privapp-permissions-elgoog.xml
+    vendor/komodo/prebuilt/common/etc/permissions/privapp-permissions-komodo.xml:system/etc/permissions/privapp-permissions-komodo.xml \
+    vendor/komodo/prebuilt/common/etc/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml \
+    vendor/komodo/prebuilt/common/etc/permissions/privapp-permissions-elgoog.xml:system/etc/permissions/privapp-permissions-elgoog.xml
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    vendor/beast/overlay/common \
-    vendor/beast/overlay/themes
+    vendor/komodo/overlay/common \
+    vendor/komodo/overlay/themes
 
 # Bootanimation
-$(call inherit-product, vendor/beast/config/bootanimation.mk)
+$(call inherit-product, vendor/komodo/config/bootanimation.mk)
 
 # Substratum Key
 PRODUCT_COPY_FILES += \
-    vendor/beast/prebuilt/common/priv-app/SubstratumKey.apk:system/priv-app/SubstratumKey/SubstratumKey.apk
+    vendor/komodo/prebuilt/common/priv-app/SubstratumKey.apk:system/priv-app/SubstratumKey/SubstratumKey.apk
 
 # Sensitive Phone Numbers list
 PRODUCT_COPY_FILES += \
-    vendor/beast/prebuilt/common/etc/sensitive_pn.xml:system/etc/sensitive_pn.xml
+    vendor/komodo/prebuilt/common/etc/sensitive_pn.xml:system/etc/sensitive_pn.xml
 
 # World APN list
 PRODUCT_COPY_FILES += \
-    vendor/beast/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+    vendor/komodo/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # Versioning
-include vendor/beast/config/version.mk
+include vendor/komodo/config/version.mk
 
 # Omni Poor Man Themes
 PRODUCT_PACKAGES += \
@@ -122,10 +122,10 @@ PRODUCT_PACKAGES += \
     PrimaryTealMeal
 
 # Props
-include vendor/beast/config/beast_props.mk
+include vendor/komodo/config/komodo_props.mk
 
 # Sounds
-include vendor/beast/config/sounds.mk
+include vendor/komodo/config/sounds.mk
 
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false

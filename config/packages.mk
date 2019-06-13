@@ -1,4 +1,4 @@
-# Copyright (C) 2019 BeastROMs
+# Copyright (C) 2019 KomodOS Rom
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
 
 PRODUCT_PACKAGES += \
     Gallery2 \
-    Beast \
+    Komodo \
     GboardGoPreb \
     Launcher3 \
     LiveWallpapers \
@@ -30,12 +30,12 @@ PRODUCT_PACKAGES += \
 
 # Weather permissions
 PRODUCT_COPY_FILES += \
-	vendor/beast/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
-    vendor/beast/prebuilt/common/etc/permissions/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
+	vendor/komodo/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
+    vendor/komodo/prebuilt/common/etc/permissions/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
 	
 # Fix Dialer
 PRODUCT_COPY_FILES +=  \
-    vendor/beast/prebuilt/common/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+    vendor/komodo/prebuilt/common/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
 # Filesystems tools
 PRODUCT_PACKAGES += \
