@@ -1,4 +1,5 @@
 # Copyright (C) 2019 BeastROMs
+# Copyright (C) 2019 KomodOS Rom
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,35 +13,35 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-BEAST_VERSION = 1.5
+KOMODO_VERSION = 1.0
 
-ifndef BEAST_BUILD_TYPE
-    BEAST_BUILD_TYPE := UNOFFICIAL
+ifndef KOMODO_BUILD_TYPE
+    KOMODO_BUILD_TYPE := UNOFFICIAL
 endif
 
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 
-ifeq ($(BEAST_OFFICIAL),true)
-   LIST = $(shell curl -s https://raw.githubusercontent.com/BeastRoms/vendor_beast/pie/beast.devices)
+ifeq ($(KOMODO_OFFICIAL),true)
+   LIST = $(shell curl -s https://raw.githubusercontent.com/KomodOS-Rom/platform_vendor_komodo/pie/komodo.devices)
    FOUND_DEVICE = $(filter $(CURRENT_DEVICE), $(LIST))
     ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
       IS_OFFICIAL=true
-      BEAST_BUILD_TYPE := OFFICIAL
+      KOMODO_BUILD_TYPE := OFFICIAL
     else
-      BEAST_BUILD_TYPE := UNOFFICIAL
+      KOMODO_BUILD_TYPE := UNOFFICIAL
     endif
 endif
 
 DATE := $(shell date -u +%Y%m%d-%H%M)
-TARGET_BACON_NAME := BeastROMs-$(BEAST_VERSION)-$(CURRENT_DEVICE)-$(BEAST_BUILD_TYPE)-$(DATE)
-BEAST_FINGERPRINT := BeastROMs/$(BEAST_VERSION)/$(PLATFORM_VERSION)/$(BUILD_ID)/$(DATE)
-BEAST_DISPLAY_VERSION := $(BEAST_VERSION)-$(BEAST_BUILD_TYPE)
+TARGET_BACON_NAME := KomodOS-$(KOMODO_VERSION)-$(CURRENT_DEVICE)-$(KOMODO_BUILD_TYPE)-$(DATE)
+KOMODO_FINGERPRINT := KomodOS/$(KOMODO_VERSION)/$(PLATFORM_VERSION)/$(BUILD_ID)/$(DATE)
+KOMODO_DISPLAY_VERSION := $(KOMODO_VERSION)-$(KOMODO_BUILD_TYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
 BUILD_DISPLAY_ID=$(BUILD_ID) \
-com.beast.fingerpring=$(BEAST_FINGERPRINT) \
-ro.beast.version=$(BEAST_VERSION) \
-ro.beast.display.version=$(BEAST_DISPLAY_VERSION) \
-ro.beast.releasetype=$(BEAST_BUILD_TYPE) \
+com.komodo.fingerprint=$(KOMODO_FINGERPRINT) \
+ro.komodo.version=$(KOMODO_VERSION) \
+ro.komodo.display.version=$(KOMODO_DISPLAY_VERSION) \
+ro.komodo.releasetype=$(KOMODO_BUILD_TYPE) \
 ro.modversion=$(TARGET_BACON_NAME)
 
