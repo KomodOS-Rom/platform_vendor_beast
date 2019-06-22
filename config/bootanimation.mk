@@ -18,6 +18,8 @@ TARGET_BOOT_ANIMATION_RES ?= undefined
 
 ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
      PRODUCT_COPY_FILES += vendor/komodo/prebuilt/common/media/1080.zip:system/media/bootanimation.zip
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),720)
+     PRODUCT_COPY_FILES += vendor/komodo/prebuilt/common/media/720.zip:system/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),2160)
      PRODUCT_COPY_FILES += vendor/komodo/prebuilt/common/media/2160.zip:system/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),undefined)
