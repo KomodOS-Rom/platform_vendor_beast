@@ -33958,7 +33958,7 @@
       authtype="3"
       type="default,supl"
       protocol="IPV4V6"
- />
+  />
  <apn carrier="Smartfren
       MMS" mcc="510" 
       mnc="09"
@@ -33970,20 +33970,20 @@
       mmsport="8080" authtype="3"
       type="mms"
       protocol="IPV4V6"
- />
+  />
 <apn carrier="Smartfren IMS"
       mcc="510"
       mnc="09"
       apn="IMS"
       type="ims"
- />
+  />
   <apn carrier="AXIS-SNS"
       mcc="510"
       mnc="08"
       apn="AXIS"
       authtype="1"
       type="default,supl"
- />
+  />
   <apn carrier="AXISwap"
       mcc="510"
       mnc="08"
