@@ -33959,8 +33959,8 @@
       type="default,supl"
       protocol="IPV4V6"
   />
- <apn carrier="Smartfren
-      MMS" mcc="510" 
+ <apn carrier="Smartfren MMS"
+      mcc="510" 
       mnc="09"
       apn="smartfren"
       user="smartfren"
