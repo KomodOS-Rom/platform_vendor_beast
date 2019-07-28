@@ -133,6 +133,9 @@ PRODUCT_PACKAGES += \
 # Props
 include vendor/komodo/config/komodo_props.mk
 
+# Include KomodoOTA config
+include vendor/komodo/config/ota.mk
+
 # Sounds
 include vendor/komodo/config/sounds.mk
 
