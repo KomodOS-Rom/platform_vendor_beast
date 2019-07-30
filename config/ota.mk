@@ -15,10 +15,11 @@ endif
 KOMODO_VERSION := KomodOS-$(shell date +"%y%m%d")-$(OTA_TYPE)
 DEVICE := $(subst komodo_,,$(TARGET_PRODUCT))
 
+
 ifneq ($(OTA_TYPE),Unofficial)
 # Komodo OTA app
 PRODUCT_PACKAGES += \
-    XenonOTA
+    KomodoOTA
 
 # OTA Configuration
 $(shell echo -e "OTA_Configuration\n \
