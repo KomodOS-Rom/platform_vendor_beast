@@ -19,7 +19,9 @@ ifndef KOMODO_BUILD_TYPE
     KOMODO_BUILD_TYPE := UNOFFICIAL
 endif
 
+DATE := $(shell date -u +%Y-%m-%d)
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
+CUSTOM_BUILD_DATE := $(DATE)-$(shell date -u +%H%M)
 
 ifeq ($(KOMODO_OFFICIAL),true)
    LIST = $(shell curl -s https://raw.githubusercontent.com/KomodOS-Rom/platform_vendor_komodo/pie/komodo.devices)
@@ -32,16 +34,20 @@ ifeq ($(KOMODO_OFFICIAL),true)
     endif
 endif
 
-DATE := $(shell date -u +%Y%m%d-%H%M)
+TARGET_PRODUCT_SHORT := $(subst komodo_,,$(CUSTOM_BUILD))
+
 TARGET_BACON_NAME := KomodOS-$(KOMODO_VERSION)-$(CURRENT_DEVICE)-$(KOMODO_BUILD_TYPE)-$(DATE)
+
 KOMODO_FINGERPRINT := KomodOS/$(KOMODO_VERSION)/$(PLATFORM_VERSION)/$(BUILD_ID)/$(DATE)
+
+PRODUCT_GENERIC_PROPERTIES += \
+ro.komodo.version=$(KOMODO_VERSION) \
+ro.komodo.releasetype=$(KOMODO_BUILD_TYPE) \
+ro.modversion=$(TARGET_BACON_NAME) \
+ro.komodo.date=$(DATE)
+
 KOMODO_DISPLAY_VERSION := $(KOMODO_VERSION)-$(KOMODO_BUILD_TYPE)
 
-PRODUCT_PROPERTY_OVERRIDES += \
-BUILD_DISPLAY_ID=$(BUILD_ID) \
-com.komodo.fingerprint=$(KOMODO_FINGERPRINT) \
-ro.komodo.version=$(KOMODO_VERSION) \
-ro.komodo.display.version=$(KOMODO_DISPLAY_VERSION) \
-ro.komodo.releasetype=$(KOMODO_BUILD_TYPE) \
-ro.modversion=$(TARGET_BACON_NAME)
-
+PRODUCT_GENERIC_PROPERTIES += \
+ro.komodo.fingerprint=$(KOMODO_FINGERPRINT) \
+ro.komodo.display.version=$(KOMODO_DISPLAY_VERSION)
